@@ -1,14 +1,6 @@
 @import "~@cmsgov/design-system-core/dist/index.css";
 @import "~@cmsgov/design-system-layout/dist/index.css";
 
-.c-header__title {
-  color: #fff;
-  text-decoration: none;
-}
-.c-header__title:hover {
-  color: #fff;
-}
-
 .c-body--wrapper {
   min-height: 300px;
 }
