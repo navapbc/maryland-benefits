@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
+        <div className="App ds-base">
           <header className="ds-base--inverse ds-u-padding--3 ds-u-display--flex ds-u-justify-content--between ds-u-align-items--center">
             <h1 className="ds-h3 ds-u-margin-bottom--0">
               <Link to="/" title="Home" className="c-header__title ds-u-text-decoration--none ds-u-color--base-inverse">
