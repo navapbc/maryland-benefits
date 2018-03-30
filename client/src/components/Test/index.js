@@ -9,7 +9,7 @@ export const Test = function({
   textfield,
   updateTextfieldValue
 }) {
-  return <div className="ds-u-padding--3">
+  return <div className="ds-u-padding--3 test-component">
     <h1>Test Page</h1>
 
     <p>{textfield}</p>
