@@ -2,6 +2,15 @@
   "name": "MarylandBenefitsClient",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "prettier": "prettier --config ./.prettierrc \"src/**/*.js\"",
+    "precommit": "yarn prettier && yarn lint"
+  },
   "dependencies": {
     "@cmsgov/design-system-core": "^1.19.1",
     "@cmsgov/design-system-layout": "^1.19.1",
@@ -14,10 +23,9 @@
     "react-scripts": "1.1.1",
     "redux": "^3.7.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-nava": "^3.0.0",
+    "prettier": "1.11.1"
   }
 }

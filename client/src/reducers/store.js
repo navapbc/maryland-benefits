@@ -5,7 +5,7 @@ import AppRecord from '../records/AppRecord';
 const middlewares = [];
 
 export function initialStore(initialState = {}) {
-   const composeEnhancers = typeof window === 'undefined' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const composeEnhancers = typeof window === 'undefined' ? compose : window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
   return createStore(
     reducers,
@@ -13,6 +13,5 @@ export function initialStore(initialState = {}) {
     composeEnhancers(applyMiddleware(...middlewares))
   );
 }
-
 
 export default initialStore();
