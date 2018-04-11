@@ -10,8 +10,9 @@
     "test:coverage": "yarn test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "prettier": "prettier --config ./.prettierrc \"src/**/*.js\"",
-    "precommit": "yarn prettier && yarn lint"
+    "precommit": "yarn prettier && yarn lint:fix"
   },
   "dependencies": {
     "@cmsgov/design-system-core": "^1.19.1",

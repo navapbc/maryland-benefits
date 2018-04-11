@@ -6,8 +6,8 @@ configure({ adapter: new Adapter() });
 
 // Mock out local storage
 const localStorageMock = {
-    getItem: jest.fn(),
-    setItem: jest.fn(),
-    clear: jest.fn()
+  getItem: jest.fn(),
+  setItem: jest.fn(),
+  clear: jest.fn()
 };
-global.localStorage = localStorageMock
+global.localStorage = localStorageMock;

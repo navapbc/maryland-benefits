@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { renderWithStore } from '../../tests/TestHelper';
 
 import Test from './index';

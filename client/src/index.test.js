@@ -1,12 +1,9 @@
-import React from 'react';
 import { render } from 'react-dom';
-
 import registerServiceWorker from './registerServiceWorker';
+import { app } from './index.js';
 
 jest.mock('./registerServiceWorker');
 jest.mock('react-dom');
-
-import { app } from './index.js';
 
 describe('App Index', () => {
   it('registers service worker', () => {
@@ -17,4 +14,7 @@ describe('App Index', () => {
     expect(render).toHaveBeenCalledTimes(1);
   });
 
+  it('renders a react app', () => {
+    expect(render.mock.calls[0][0]).toEqual(app);
+  });
 });

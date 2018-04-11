@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import { render } from '../../tests/TestHelper';
 import { Map } from 'immutable';
 
@@ -8,8 +8,11 @@ import ToJS from './index';
 // Example component that contains a prop called `foo`
 // which is an object.
 const ExampleComponent = ({ foo }) => {
-  return <div>{foo.bar}</div>
-}
+  return <div />;
+};
+ExampleComponent.propTypes = {
+  foo: PropTypes.object
+};
 
 const foo = Map({ bar: 'success' });
 
@@ -21,7 +24,7 @@ const setup = (_props = {}) => {
   return {
     props,
     wrapper
-  }
+  };
 };
 
 describe('ToJS', () => {
