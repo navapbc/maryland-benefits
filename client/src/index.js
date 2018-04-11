@@ -6,7 +6,7 @@ import store from './reducers/store';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-const app = <Provider store={store}>
+export const app = <Provider store={store}>
   <App />
 </Provider>;
 
