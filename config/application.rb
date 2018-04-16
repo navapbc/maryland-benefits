@@ -26,5 +26,15 @@ module MarylandBenefits
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+
+    # Swap out the existing ActionDispatch::Static middleware for our own version
+    # that points to a different directory than /public. In our case, we want to point
+    # to /client/build/ to play nicely with create-react-app and where it builds to
+    config.middleware.swap(
+      ActionDispatch::Static,
+      ActionDispatch::Static,
+      Rails.root.join("client", "build").to_s
+    )
   end
 end
