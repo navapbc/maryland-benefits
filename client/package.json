@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "docker:start": "if test \"$NODE_ENV\" = \"production\" ; then yarn build; else yarn start; fi",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

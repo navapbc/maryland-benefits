@@ -1,0 +1,36 @@
+version: "3"
+services:
+  postgres:
+    image: postgres:10.3
+    env_file:
+      - .env
+
+  rails:
+    build:
+      context: .
+      args:
+        RAILS_ENV: development
+    env_file:
+      - .env
+    ports:
+        - "3001:3001"
+    # link database and client to app
+    links:
+      - postgres
+    volumes:
+        - ".:/var/core/app"
+        - "/var/core/app/tmp"
+
+  client:
+    build:
+      context: ./client
+      args:
+        NODE_ENV: development
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./client:/var/core/app"
+    links:
+      - rails
