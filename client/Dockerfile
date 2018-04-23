@@ -1,7 +1,7 @@
 FROM node:8.11.1
 
-WORKDIR /var/core/app
 COPY . /var/core/app
+WORKDIR /var/core/app
 
 # Install node modules
 RUN yarn install

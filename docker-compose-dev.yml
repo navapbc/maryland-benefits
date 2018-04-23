@@ -1,0 +1,17 @@
+# this is our development docker-compose building on top of the production docker-compose, just mounting
+# the sync image - not redefining anything else
+
+version: "3.2"
+services:
+  rails:
+    volumes:
+      - rails-sync:/var/core/app:nocopy
+  client:
+    volumes:
+      - client-sync:/var/core/app:nocopy
+
+volumes:
+  rails-sync:
+    external: true
+  client-sync:
+    external: true

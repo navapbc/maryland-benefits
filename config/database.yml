@@ -25,7 +25,7 @@ default: &default
 
 development:
   <<: *default
-  host: postgres
+  host: localhost
   database: <%= "#{ENV['POSTGRES_DBNAME']}_development" %>
 
   # The specified database role being used to connect to postgres.
