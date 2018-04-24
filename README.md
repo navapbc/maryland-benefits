@@ -42,7 +42,8 @@ Docker-sync can be used to combat I/O slowness that docker experiences on OSX. T
 
 
        docker-sync-stack start
-       # or
+
+       # or as two separate commands:
 
        docker-sync start  # starts sync process in the background
        docker-compose -f docker-compose.yml -f docker-compose-dev.yml up
